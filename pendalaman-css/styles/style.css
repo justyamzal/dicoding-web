@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
@@ -8,6 +11,7 @@ h2, h3 {
     color: #00a2c6;
 }
 
+/* Jumbotron */
 .jumbotron {
     font-size: 20px;
     padding: 60px;
@@ -16,6 +20,7 @@ h2, h3 {
     color: white;
 }
 
+/* Navigation Bar */
 nav {
     background-color: #00a2c6;
     padding: 5px;
@@ -38,8 +43,24 @@ nav li {
     margin-right: 20px;  
 }
 
+/* Content */
+
+#content {
+    float: left;
+    width: 75%;
+}
+
 main {
     padding: 20px;
+    overflow: auto;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    
+    padding-left: 20px;
+
 }
 
 
@@ -66,6 +87,8 @@ main {
     padding: 20px;
     margin-top: 20px;
 }
+
+/* Footer */
 
 footer {
     padding: 20px;
