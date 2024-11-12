@@ -98,3 +98,11 @@ footer {
     font-weight: bold;
 
 }
+
+/* FOR MOBILE */
+@media screen and (max-width: 1000px) {
+    #content, aside {
+        width: 100%;
+        padding: 0;
+    }
+}
