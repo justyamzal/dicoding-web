@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
@@ -46,31 +47,48 @@ nav a:hover {
     font-weight: bold;
 }
 
-nav li {
-    display: inline;
-    list-style-type: none;
-    margin-right: 20px;  
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
 }
+
+nav li {
+    /*! no need to use inline bcs it is already using display flex */
+    /* display: inline; */
+    list-style-type: none;
+    /* margin-right: 20px;   */
+}
+
 
 /* CONTENT */
 
 #content {
-    float: left;
-    width: 75%;
+    /* float: left; */
+    /* width: 75%; */
+    
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
 }
 
 main {
     padding: 20px;
-
-    overflow: auto;
+    display: flex;
+    gap: 1.5rem;
+   
+    /* overflow: auto; */
 }
 
 /* Aside Panel */
 aside {
-    float: right;
-    width: 25%;
-    
-    padding-left: 20px;
+    /* float: right; */
+    /* width: 25%; */
+    /* padding-left: 20px; */
+
+    flex: 1;
 
 }
 
@@ -90,7 +108,7 @@ aside {
 
 
 .profile img {
-    width: 200px;
+    max-width: 200px;
 }
 
 .card {
@@ -98,7 +116,7 @@ aside {
     border-radius: 5px;
     
     padding: 20px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 /* FOOTER */
@@ -113,9 +131,22 @@ footer {
 }
 
 /* FOR MOBILE */
-@media screen and (max-width: 1000px) {
-    #content, aside {
-        width: 100%;
-        padding: 0;
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main aside {
+        align-self: stretch;
     }
 }
