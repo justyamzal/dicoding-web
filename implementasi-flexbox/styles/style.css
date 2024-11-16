@@ -58,18 +58,18 @@ nav ul {
 }
 
 nav li {
-    /*! no need to use inline bcs it is already using display flex */
-    /* display: inline; */
+    /*! no need to use inline bcs it is already using display flex
+     display: inline; */
     list-style-type: none;
-    /* margin-right: 20px;   */
+    /* margin-right: 20px;*/
 }
 
 
 /* CONTENT */
 
 #content {
-    /* float: left; */
-    /* width: 75%; */
+    /* float: left; 
+    width: 75%; */
     
     flex: 5;
     display: flex;
@@ -87,11 +87,16 @@ main {
 
 /* Aside Panel */
 aside {
-    /* float: right; */
-    /* width: 25%; */
-    /* padding-left: 20px; */
+    /* float: right;
+    width: 25%; 
+    padding-left: 20px; */
 
-    flex: 1;
+    flex: 1; /* flex-grow*/
+    /*! Shorthand
+    flex: 0 1;  | flex-grow flex-shrink |
+    flex: 0 auto; | flex-grow flex-basis | 
+    
+    */
 
 }
 
