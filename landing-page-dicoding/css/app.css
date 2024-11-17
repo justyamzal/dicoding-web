@@ -175,3 +175,27 @@ main aside .social-media li a hover {
 }
 
 
+/* Medium Devices */
+@media screen and (max-width: 768px) {
+    header.navbar-container{
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .content .content-description .title {
+        font-size: 3rem;
+    }
+
+    main .content .content-image {
+        order: -1;
+    }
+}
