@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    background-color: #4A628A;
+    justify-content: space-around;
+    color: #DFF2EB;
+    height: 50px;
+    align-items: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    
+}
+
+/* logo */
+nav .logo {
+    /* font-family: "Edu AU VIC WA NT Arrows", cursive; */
+    font-family: 'pacifico',cursive;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+/* navbar list menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+/* menu link */
+nav ul li a {
+    color: #B9E5E8;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+/* hover menu list */
+nav ul li a:hover {
+    color: rgb(250, 240, 250);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top:-3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color:#DFF2EB;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+
+/*! change pivot for span to left corner */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+/*! change pivot for span to right corner  */
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+/* Hamburger Button Transform */
+/*! rotate the first span (second child)  */
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);    
+}
+/*! rotate last span  */
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+/*! hide third child span */
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+/* !! Toggle Mobile / Phone Size */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0; 
+        /*! stitch to right side*/
+        top: 0;
+        width: 70%;
+        height: 100vh;
+
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: black; */
+
+        /*! to set the side menu toggle to bottom side of navbar*/
+        z-index: -1; 
+        
+        background-color:#4A628A; 
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -136,7 +136,7 @@ footer {
 
 }
 
-/* FOR MOBILE */
+/* FOR MOBILE/TABLET */
 @media screen and (max-width: 1200px) {
   main {
     flex-flow: column nowrap;
