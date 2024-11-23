@@ -1,5 +1,5 @@
-// for hamburger slider
-//!getting Menu   Toggle 
+// For hamburger slider
+//!getting Menu Toggle 
 const menuToggle = document.querySelector('.menu-toggle input');
 const nav = document.querySelector('nav ul'); 
 
