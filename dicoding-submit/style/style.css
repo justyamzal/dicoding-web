@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -15,16 +15,21 @@ nav {
     justify-content: space-around;
     color: #DFF2EB;
     height: 50px;
-    align-items: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    align-items: center;
+
+    /* padding: 0 20px; */
     
+
 }
 
 /* logo */
 nav .logo {
     /* font-family: "Edu AU VIC WA NT Arrows", cursive; */
-    font-family: 'pacifico',cursive;
+    font-family: 'pacifico', cursive;
     font-weight: bolder;
     letter-spacing: 3px;
+
+    /* margin-left: 0; */
 }
 
 /* navbar list menu */
@@ -32,7 +37,10 @@ nav ul {
     display: flex;
     list-style: none;
     width: 40%;
-    justify-content: space-between;
+
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    gap: 20px;
 }
 
 /* menu link */
@@ -41,6 +49,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 0.8em;
 }
+
 /* hover menu list */
 nav ul li a:hover {
     color: rgb(250, 240, 250);
@@ -60,7 +69,7 @@ nav ul li a:hover {
     width: 40px;
     height: 28px;
     left: -5px;
-    top:-3px;
+    top: -3px;
     opacity: 0;
     cursor: pointer;
     z-index: 2;
@@ -71,7 +80,7 @@ nav ul li a:hover {
     display: block;
     width: 28px;
     height: 3px;
-    background-color:#DFF2EB;
+    background-color: #DFF2EB;
     border-radius: 3px;
     transition: all 0.5s;
 }
@@ -82,6 +91,7 @@ nav ul li a:hover {
 .menu-toggle span:nth-child(2) {
     transform-origin: 0 0;
 }
+
 /*! change pivot for span to right corner  */
 .menu-toggle span:nth-child(4) {
     transform-origin: 0 100%;
@@ -89,18 +99,19 @@ nav ul li a:hover {
 
 /* Hamburger Button Transform */
 /*! rotate the first span (second child)  */
-.menu-toggle input:checked ~ span:nth-child(2) {
+.menu-toggle input:checked~span:nth-child(2) {
     background-color: white;
-    transform: rotate(45deg) translate(-1px, -1px);    
+    transform: rotate(45deg) translate(-1px, -1px);
 }
+
 /*! rotate last span  */
-.menu-toggle input:checked ~ span:nth-child(4) {
+.menu-toggle input:checked~span:nth-child(4) {
     background-color: white;
     transform: rotate(-45deg) translate(-1px, 0);
 }
 
 /*! hide third child span */
-.menu-toggle input:checked ~ span:nth-child(3){
+.menu-toggle input:checked~span:nth-child(3) {
     transform: scale(0);
 }
 
@@ -109,9 +120,10 @@ nav ul li a:hover {
     .menu-toggle {
         display: flex;
     }
+
     nav ul {
         position: absolute;
-        right: 0; 
+        right: 0;
         /*! stitch to right side*/
         top: 0;
         width: 70%;
@@ -123,15 +135,103 @@ nav ul li a:hover {
         /* background-color: black; */
 
         /*! to set the side menu toggle to bottom side of navbar*/
-        z-index: -1; 
-        
-        background-color:#4A628A; 
+        z-index: -1;
+
+        background-color: #4A628A;
         transform: translateX(100%);
         transition: all 1s;
         opacity: 0;
     }
+
     nav ul.slide {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+
+/* Slider */
+.slider {
+    width: 1300px;
+    max-width: 100vw;  
+    height: 700px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* slider list */
+.slider .list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+}
+
+/* slider image */
+.slider .list img {
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* slider buttons */
+.slider .buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* slider button style */
+.slider .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+
+}
+
+/* slider dots */
+.slider .dots {
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* slider dots style */
+.slider .dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+/* active slider dots */
+.slider .dots li.active {
+    width: 30px;
+}
+/* responsive */
+@media screen and (max-width:768px) { 
+    .slider {
+        height: 400px;
     }
 }
