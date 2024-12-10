@@ -1,0 +1,196 @@
+
+@import url(font.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Theme colors */
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --bg-green:#00796b;
+    --white:#ffffff;
+    --midnight:#104f55;
+
+
+    /* Theme font-family */
+    --Abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Josefin:'Josefin',cursive;
+    --Lexend:"Lexend",cursive;
+    --Livvic:"Livvic",cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*--- Nav ---*/
+.nav {
+    background-color: var(--bg-green);
+    padding: 0 2rem; /*1rem = 16px*/
+    height: 0rem; /*collaps for toggle menu*/
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    width: 100%;
+    /* display: flex; */
+    position: fixed;
+    z-index: 100;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+
+/* Logo */
+.nav .nav-brand a {
+    font-size: 1.6rem;
+    padding: 1rem 0 ;
+    text-decoration: none;
+    display: block;
+    font-family: var(--Lexend);
+    font-size: 1.6rem;
+    color: white;
+}
+
+/* Menu list */
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-links {
+    padding: 1.6rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-links a {
+    color: white;
+}
+
+
+
+/* Toggle */
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+}
+
+.nav .nav-items .nav-links:hover {
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-links a:hover {
+    /* color: var(--bg-green); */
+}
+
+
+.collapse {
+    height: 30rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:750px) {
+    .nav .nav-menu, .nav .nav-items {
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse {
+        display: initial;
+    }
+}
+
+
+
+/*--- Banner ---*/
+
+.banner {
+    /* background-color: #e0f7fa; */
+    background-image: url(../assets/images/bromo.jpg);
+    background-color: rgba(0,0,0,0.24);
+    height: 70vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    padding: 60px 20px;
+    color: var(--white);
+    /* margin-bottom: 20px; */
+}
+
+.banner h1 {
+    padding: 16px;
+    font-family: var(--Josefin);
+    font-size: 2em;
+}
+
+.banner p {
+    font-family: var(--Josefin);
+    padding: 16px;
+}
+
+.banner .btn {
+    
+}
+
+
+/*--- Content ---*/
+.content-wrapper {
+    /* width: 85%; */
+}
+
+.content-wrapper .section-heading {
+    font-size: 24px;
+    font-family: var(--Lexend);
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    transition: all 0.4s;
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 24px 36px;
+    color: var(--bg-color);
+    
+}
+
+.content-wrapper .section-heading:hover {
+    padding: 4px 48px;
+    background-color: var(--bg-green);
+}
