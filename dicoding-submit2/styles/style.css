@@ -17,6 +17,12 @@
     --white:#ffffff;
     --midnight:#104f55;
 
+    --green:#347928;
+    --mint:#C0EBA6;
+    --white2:#FFFBE6;
+    --yellow:#FCCD2A;
+
+
 
     /* Theme font-family */
     --Abel:'Abel',cursive;
@@ -24,6 +30,10 @@
     --Josefin:'Josefin',cursive;
     --Lexend:"Lexend",cursive;
     --Livvic:"Livvic",cursive;
+
+
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 a {
@@ -168,7 +178,21 @@ ul {
 }
 
 .banner .btn {
-    
+    margin: 1.8rem; 
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+    background: var(--bg-green);
+    color: var(--mint) ;
+
+}
+.banner .btn:hover {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
 }
 
 
