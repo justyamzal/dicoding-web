@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Explore Jatim</title>
 
-    
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- SwipperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <!-- HEADER -->
     <header>
@@ -48,10 +60,90 @@
             <h1>Jelajahi Keindahan Jawa Timur</h1>
             <p>Mulai petualangan anda dengan destinasi wisata terbaik di jatim</p>
             <button class="btn">Booking</button>
-
-
-
         </section>
+
+        <section class="city-card swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper ">
+                    <!-- item 1 -->
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="assets/images/prb.jpg" alt="card-image" class="card-image">
+                            <p class="badge prb">Probolinggo</p>
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            <button class="material-symbols-rounded card-button">
+                                arrow_forward
+                            </button>
+                        </a>
+                    </li>
+                    <!-- item 2 -->
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="assets/images/mlg.jpg" alt="card-image" class="card-image">
+                            <p class="badge mlg">Malang</p>
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            <button class="material-symbols-rounded card-button">
+                                arrow_forward
+                            </button>
+                        </a>
+                    </li>
+                    <!-- item 3 -->
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="assets/images/sby.jpg" alt="card-image" class="card-image">
+                            <p class="badge sby">Surabaya</p>
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            <button class="material-symbols-rounded card-button">
+                                arrow_forward
+                            </button>
+                        </a>
+                    </li>
+                    <!-- item 4 -->
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="assets/images/stbd2.jpg" alt="card-image" class="card-image">
+                            <p class="badge stbd">Situbondo </p>
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            <button class="material-symbols-rounded card-button">
+                                arrow_forward
+                            </button>
+                        </a>
+                    </li>
+                    <!-- item 5 -->
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="assets/images/jbr.jpg" alt="card-image" class="card-image">
+                            <p class="badge jbr">Jember</p>
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            <button class="material-symbols-rounded card-button">
+                                arrow_forward
+                            </button>
+                        </a>
+                    </li>
+                    <!-- item 6 -->
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="assets/images/bwi.jpg" alt="card-image" class="card-image">
+                            <p class="badge bwi">Banyuwangi</p>
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            <button class="material-symbols-rounded card-button">
+                                arrow_forward
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+
+            </div>
+        </section>
+
+
 
         <div class="content-wrapper">
             <section class="blogs">
@@ -76,9 +168,9 @@
                     <h2 class="section-heading">Galeri</h2>
                 </a>
             </section>
-            
+
         </div>
-        
+
 
     </main>
     <!-- END OF MAIN -->
@@ -90,7 +182,12 @@
     </footer>
     <!-- END FOOTER -->
 
-    <!-- JAVASCRIPT -->
-     <script src="js/script.js" ></script>
+ 
+    <!-- SwipperJS  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+       <!-- JAVASCRIPT -->
+       <script src="js/script.js"></script>
 </body>
+
 </html>

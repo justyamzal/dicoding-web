@@ -1,7 +1,6 @@
 
 @import url(font.css);
 
-
 * {
     margin: 0;
     padding: 0;
@@ -123,9 +122,9 @@ ul {
     background-color: var(--midnight);
 }
 
-.nav .nav-items .nav-links a:hover {
-    /* color: var(--bg-green); */
-}
+/* .nav .nav-items .nav-links a:hover {
+    color: var(--bg-green);
+} */
 
 
 .collapse {
@@ -186,20 +185,20 @@ ul {
     font-family: var(--Livvic);
     cursor: pointer;
     background: var(--bg-green);
-    color: var(--mint) ;
+    color: white ;
 
 }
 .banner .btn:hover {
     background: transparent;
     border: 1px solid var(--white);
-    color: var(--white);
+    color: var(--mint);
 }
 
 
 /*--- Content ---*/
-.content-wrapper {
-    /* width: 85%; */
-}
+/* .content-wrapper {
+    width: 85%;
+} */
 
 .content-wrapper .section-heading {
     font-size: 24px;
@@ -210,7 +209,7 @@ ul {
     display: inline-block;
     padding: 4px 10px;
     margin: 24px 36px;
-    color: var(--bg-color);
+    
     
 }
 
@@ -218,3 +217,150 @@ ul {
     padding: 4px 48px;
     background-color: var(--bg-green);
 }
+
+
+/*--- City Card ----*/
+
+.city-card {
+    font-family: "Inter",sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#ECEFFE, #CED6FB);
+}
+
+.card-wrapper {
+    max-width: 1000px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    min-height: 60vh;
+    /* min-height: 100vh; */
+    overflow: hidden;
+
+}
+
+.card-list .card-item .card-link {
+    /* width: 400px; */
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+
+}
+
+.card-list .card-item .card-link::after {
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #5372F0;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+ color: #5372F0;
+ padding: 8px 16px;
+ font-size: 0.95rem;
+ font-weight: 500;
+ margin: 16px 0 18px;
+ background: #DDE4FF;
+ width: fit-content;
+ border-radius: 50px;
+}
+
+.card-list .card-link .badge .prb {
+   color: #B22485;
+    background: #f7DFF5;
+}
+
+.card-list .card-link .badge .mlg {
+    color: #B25A2B;
+    background: #FFE3D2;
+}
+
+.card-list .card-link .badge .sby {
+    color: #205C20;
+    background: #D6F8D6;
+}
+
+.card-list .card-link .badge .stbd {
+    color: #856404;
+    background: #fff3cd;
+    
+}
+.card-list .card-link .badge .jbr {
+    color: #B22485;
+    background: #f7dff5;
+}
+.card-list .card-link .badge .bwi {
+    color: #B25A2B;
+    background: #FFE3D2;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;   
+}
+
+.card-list .card-link .card-button {
+    height: 32px;
+    width: 32px;
+    color: #5372F0;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #5372f0;
+    transform: rotate(-45deg);
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background-color: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372F0;
+    
+}        
+
+.card-list .swiper-pagination-bullet-active {
+    opacity: 1;
+
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #5372F0;
+    margin-top: -35px;
+}
+
+.card-wrapper .swiper-pagination {
+    padding-bottom: 2vw;
+}
+
+
+@media screen and max (max-width: 768) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+
+    }
+    .card-wrapper .swiper-slide-butotn {
+        display: none;
+    }
+}
+
